@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>House of Toast Menu</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Crimson+Text">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Allerta">
+    <link href="stuff/normalize.css" rel="stylesheet">
+    <link href="stuff/main.css" rel="stylesheet">
+    <script type="text/javascript" src="stuff/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="stuff/functions.js"></script>
+
+        <link href="stuff/video-js/video-js.css" rel="stylesheet">
+
+    <script src="stuff/video-js/video.js"></script>
+
+    <script>
+        _V_.options.flash.swf = "stuff/video-js/video-js.swf"
+    </script>
+</head>
+<body>
+    <h1 class="headerfont title centertext">
+        House of Toast Menu
+    </h1>
+    <h2 id="specialheader" class="headerfont title floatleftheader hidden">
+        Hourly Special
+    </h2>
+    <ul id="special" class="copyfont list speciallist cf">
+    </ul>
+    <h2 class="headerfont title floatleftheader">
+        Choose your bread
+    </h2>
+    <ul id="bread" class="copyfont list breadlist cf">
+    </ul>
+    <h2 class="headerfont title centertext">
+        Choose up to <span id="toppingtotalallowed"></span> toppings out of <span id="toppingtotal"></span><span id="toppingcombination">
+        </span>
+    </h2>
+    <p class="headerfont title centertext">If exposure to anything on this list of toppings will ruin your weekend: DON'T RISK IT.<br />For everyone's sake, enjoy HoT from a minimum safe distance.</p>
+    <ul id="topping" class="copyfont list toppinglist cf">
+        <div class="toppinglistinner"></div>
+    </ul>
+    <div id="video">
+        <video id="videoplayer" class="video-js vjs-default-skin" preload="auto" width="1000"
+            height="562" data-setup="{}">
+            <source src="stuff/videos/40secliverwurstgraphicBrighter.mp4" type='video/mp4' />
+        </video>
+    </div>
+
+    
+    <script>
+        //load the player when we get here.
+        var playingVideo = "video1";
+        var firstPlay = true;
+        var myPlayer = _V_("videoplayer");
+        myPlayer.addEvent("ended", function () { stopVideo(myPlayer) });
+        setPlayVideoInterval(myPlayer);
+    </script>
+</body>
+</html>
