@@ -1,0 +1,111 @@
+html {
+    background: url('flame.jpg') no-repeat center center fixed;
+    background-color: red;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/*** headers ***/
+
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 28px;
+}
+.title {
+    color: #FFF;
+    text-shadow: 4px 4px 4px #000;
+    font-weight: normal;
+}
+.floatleftheader {
+    float: left;
+    margin: 0 10px 0 40px;
+    line-height: 53px;
+}
+.floatleftheader:after {
+    content: ":";
+}
+.list {
+    list-style-type: none;
+    font-size: 18px;
+    width: 1000px;
+    margin: 0;
+}
+.list li {
+    display: inline-block;
+    vertical-align: top;
+    width: 333px;
+}
+.itemdetail {
+    border: solid 1px #ccc;
+    background-color: #ccc;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 4px 4px;
+    margin: 4px 8px;
+    box-shadow: -3px 0 4px #382013;
+}
+.breadlist .itemdetail, .speciallist .itemdetail {
+    padding: 4px 10px;
+    margin: 4px 10px;
+}
+.breadlist li, .speciallist li {
+    width: auto;
+}
+.toppinglist {
+    height: 1000px;
+    overflow: hidden;
+    border-top: solid 5px rgba(195, 61, 24, .5);
+    border-bottom: solid 5px rgba(195, 61, 24, .5);
+    padding-left: 0;
+    margin-left: 40px;
+    position: relative;
+}
+.toppinglistinner {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+/*** helper classes ***/
+.centertext {
+    text-align: center;
+    width: 1000px;
+}
+.hidden {
+    display: none;
+}
+.cf:before, .cf:after {
+    content: "";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+
+/* videos */
+#video {
+	display: none;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	/*background-color: rgba(255, 255, 255, 0.8);*/
+	position: fixed;
+	text-align: center;
+}
+#video .video-js {
+    display: inline-block;
+    margin-top: 1288px;
+    border: solid 4px #000;
+}
+
+/*** fonts ***/
+.headerfont {
+    font-family: 'Allerta' , Helvetica, Arial, sans-serif;
+}
+.copyfont {
+    font-family: 'Crimson Text' , Georgia, Times, serif;
+}
